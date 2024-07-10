@@ -30,13 +30,13 @@ Loan Calculator is a web application that allows users to calculate their monthl
 
 This screenshot shows the home page where users can enter the loan amount, interest rate, and loan term in years.
 
-<img src="screenshots/home_page.png" alt="Home Page" width="600"/>
+<img src="home_page.png" alt="Home Page" width="600"/>
 
 ### Loan Calculation Result
 
 This screenshot displays the results after the user has entered the loan details and clicked the "Calculate" button. It shows the EMI, total interest payable, and total amount payable, along with a pie chart for visual representation.
 
-<img src="screenshots/result_page.png" alt="Result Page" width="600"/>
+<img src="result_page.png" alt="Result Page" width="600"/>
 
 ## Getting Started
 
