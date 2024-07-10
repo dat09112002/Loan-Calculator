@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="loan-calculator">
+        <div class="top">
+            <h2>Loan Calculator</h2>
+            <form id="loan-form">
+                <div class="group">
+                    <div class="title">Amount</div>
+                    <input type="text" id="loan-amount" value="30000" class="loan-amount" />
+                </div>
+
+                <div class="group">
+                    <div class="title">Interest Rate</div>
+                    <input type="text" id="interest-rate" value="8.5" class="interest-rate" />
+                </div>
+
+                <div class="group">
+                    <div class="title">Tenure (Years)</div>
+                    <input type="text" id="loan-years" value="20" class="loan-years" />
+                </div>
+
+                <div class="group">
+                    <div class="title">Tenure (Months)</div>
+                    <input type="text" id="loan-months" value="240" class="loan-months" readonly />
+                </div>
+
+                <button type="submit" id="calculate-btn" class="calculate-btn">Calculate</button>
+            </form>
+        </div>
+
+        <div class="result">
+            <div class="left">
+                <div class="loan-emi">
+                    <h3>Loan EMI (Equated Monthly Instalment)</h3>
+                    <div id="loan-emi" class="value">123</div>
+                </div>
+
+                <div class="total-interest">
+                    <h3>Total Interest Payable</h3>
+                    <div id="total-interest" class="value">1234</div>
+                </div>
+
+                <div class="total-amount">
+                    <h3>Total Amount</h3>
+                    <div id="total-amount" class="value">12345</div>
+                </div>
+
+                <div class="expected-date">
+                    <h3>Expected End Date</h3>
+                    <div id="expected-date" class="value">N/A</div>
+                </div>
+            </div>
+
+            <div class="right">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
